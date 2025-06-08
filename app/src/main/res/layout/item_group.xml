@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/divider"
+    app:strokeWidth="0.5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Group Icon với gradient background -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_group_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_group_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="A" />
+
+                <!-- Badge cho nhóm riêng tư -->
+                <ImageView
+                    android:id="@+id/iv_private_badge"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="4dp"
+                    android:background="@android:color/white"
+                    android:padding="2dp"
+                    android:src="@android:drawable/ic_lock_lock"
+                    android:visibility="gone"
+                    app:tint="@color/primary" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Group Name -->
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_role_badge"
+            app:layout_constraintStart_toEndOf="@+id/cv_group_icon"
+            app:layout_constraintTop_toTopOf="@+id/cv_group_icon"
+            tools:text="📚 Nhóm Đồ án Android" />
+
+        <!-- Role Badge ở góc phải trên -->
+        <TextView
+            android:id="@+id/tv_role_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/role_badge_background"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="Admin"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_group_name"
+            tools:text="Admin" />
+
+        <!-- Group Description -->
+        <TextView
+            android:id="@+id/tv_group_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_group_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_group_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_group_name"
+            tools:text="Nhóm 01, môn Công nghệ phần mềm - Phát triển ứng dụng quản lý công việc" />
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_group_icon" />
+
+        <!-- Stats Container -->
+        <LinearLayout
+            android:id="@+id/layout_stats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider">
+
+            <!-- Member Count -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/ic_nav_groups"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/tv_member_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    tools:text="5 thành viên" />
+            </LinearLayout>
+
+            <!-- Task Count -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/ic_nav_tasks"
+                    app:tint="@color/accent" />
+
+                <TextView
+                    android:id="@+id/tv_task_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    tools:text="12 nhiệm vụ" />
+            </LinearLayout>
+
+            <!-- Created Date với icon -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@android:drawable/ic_menu_recent_history"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tv_created_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    tools:text="15/06/2023" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Recent Activity Indicator -->
+        <View
+            android:id="@+id/indicator_recent_activity"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/activity_indicator"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_stats"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_stats" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView> 

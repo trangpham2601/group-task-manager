@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="6dp"
+    android:layout_marginHorizontal="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/surface">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <View
+            android:id="@+id/status_dot"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/circle_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:backgroundTint="@color/task_todo" />
+
+        <TextView
+            android:id="@+id/tv_task_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/chip_priority"
+            app:layout_constraintStart_toEndOf="@+id/status_dot"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hoàn thành giao diện người dùng" />
+
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:drawableStart="@drawable/ic_nav_groups"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/text_secondary"
+            app:layout_constraintEnd_toEndOf="@+id/tv_task_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_task_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_task_title"
+            tools:text="Nhóm Android" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_priority"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:chipMinHeight="28dp"
+            app:chipStartPadding="8dp"
+            app:chipEndPadding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Cao" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView> 
