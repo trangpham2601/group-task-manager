@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary colors - Blue theme -->
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#FF9800</color>
+    
+    <!-- Secondary colors - Green theme -->
+    <color name="secondary">#4CAF50</color>
+    <color name="secondary_dark">#388E3C</color>
+    <color name="secondary_light">#C8E6C9</color>
+    
+    <!-- Background colors -->
+    <color name="background_light">#FFF5F5F5</color>
+    <color name="background_dark">#121212</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="surface_dark">#1E1E1E</color>
+    
+    <!-- Text colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#CCCCCCCC</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    
+    <!-- Status colors -->
+    <color name="success">#4CAF50</color>
+    <color name="error">#FFF44336</color>
+    <color name="warning">#FF9800</color>
+    
+    <!-- Task status colors -->
+    <color name="task_todo">#FF9800</color>
+    <color name="task_in_progress">#2196F3</color>
+    <color name="task_done">#4CAF50</color>
+    
+    <!-- Task priority colors -->
+    <color name="priority_low">#81C784</color>
+    <color name="priority_medium">#FFB74D</color>
+    <color name="priority_high">#E57373</color>
+    
+    <!-- Chip colors -->
+    <color name="chip_background_color">#EAEAEA</color>
+    <color name="chip_selected_background">#2196F3</color>
+    <color name="chip_selected_text">#FFFFFF</color>
+    
+    <!-- Other colors -->
+    <color name="divider">#FFEEEEEE</color>
+    <color name="disabled">#E0E0E0</color>
+    <color name="selected">#E8F5E8</color>
+    <color name="card_stroke">#E0E0E0</color>
+    
+    <!-- Chat specific colors -->
+    <color name="chat_background">#FAFAFA</color>
+    <color name="message_sent_background">#E3F2FD</color>
+    <color name="message_received_background">#F5F5F5</color>
+    <color name="typing_indicator_background">#E3F2FD</color>
+    <color name="unread_badge_background">#FF4444</color>
+    <color name="unread_badge_text">#FFFFFF</color>
+    
+    <!-- Circle backgrounds -->
+    <color name="circle_primary_light">#E1F5FE</color>
+</resources>
